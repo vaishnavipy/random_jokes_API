@@ -13,64 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <script src="https://use.fontawesome.com/031e3862f6.js"></script>
 
-        <style>
-
-            body{
-                background-color: #F1F5F8;
-            }
-            
-            #container{
-                height: 100vh;
-                display: grid;
-                align-content: center;
-                justify-content: center;
-                
-                
-               
-              
-            }
-           img{
-            
-            animation-iteration-count: infinite;
-            animation-play-state: paused;  
-               animation-duration: 0.1s;
-              
-               position: relative;
-               left:70px;
-            }
-
-            button{
-                border-radius: 10px;
-                color:white;
-                letter-spacing: 3px;
-                cursor: pointer;
-                background-color: #49A6E9;
-                border:none;
-                margin:20px;
-                padding: 10px;
-                
-            }
-            button:hover{
-                background: rgba(0,0,0,0.5);
-                color:#49A6E9;
-                border: 1px solid #49A6E9;
-
-            }
-
-            @keyframes shake {
-                0%   { left:70px; }
-                25%  { right:90px; }
-                50%  { left:90px; }
-                75%  { right:90px; }
-                100% { left:90px; }
-                }
-                #jokes{
-                    color:#617D98;
-                    letter-spacing: 3px;
-                    font-size: 20px;
-                }
-
-        </style>
+       
         
     
         
@@ -80,47 +23,14 @@
     <body>
         <div id="container">
             <img id="img" src="https://ajax-basic-projects-random-jokes.netlify.app/chuck.png">
-            <button id="btn">MAKE ME LAUGH CHUCK !</button>
-          
+           <div> <button id="btn">MAKE ME LAUGH CHUCK !</button></div>
+            <div id="jokes"></div>
 
         </div>
-        <div id="jokes"></div>
+       
 
 
-        <script>
-            window.onload = function(){
-                const btn = document.getElementById("btn");
-                const image = document.getElementById("img");
-                const jokes_div = document.getElementById("jokes");
-
-                btn.onclick = function(){
-
-                    image.style.animationName = "shake";
-                    
-                    image.style.animationPlayState ="running";
-
-                    setTimeout(function(){
-
-                        image.style.animationPlayState ="paused";                        
-
-                    },700)
-
-                    fetch("http://api.icndb.com/jokes/random?escape=javascript")
-                    .then(response => response.json())
-                    .then(data => jokes_div.innerHTML =data["value"]["joke"]  )
-                    .catch(err => console.log(err));
-
-
-                }
-
-
-
-            }
-          
-
-
-
-        </script>
+       
         
    
     </body>

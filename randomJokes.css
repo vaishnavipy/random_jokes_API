@@ -1,0 +1,54 @@
+body{
+    background-color: #F1F5F8;
+}
+
+#container{
+   
+    text-align: center;
+    padding-top: 20vh;
+    
+    
+   
+  
+}
+img{
+
+animation-iteration-count: infinite;
+animation-play-state: paused;  
+   animation-duration: 0.1s;
+  display: inline-block;
+   position: relative;
+  
+}
+
+button{
+    border-radius: 10px;
+    color:white;
+    letter-spacing: 3px;
+    cursor: pointer;
+    background-color: #49A6E9;
+    border:none;
+    margin:20px;
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+}
+button:hover{
+    background: rgba(0,0,0,0.5);
+    color:#49A6E9;
+    border: 1px solid #49A6E9;
+
+}
+
+@keyframes shake {
+    0%   { left:20px; }
+    25%  { right:20px; }
+    50%  { left:20px; }
+    75%  { right:20px; }
+    100% { left:0px; }
+    }
+    #jokes{
+        color:#617D98;
+        letter-spacing: 3px;
+        font-size: 20px;
+    }
